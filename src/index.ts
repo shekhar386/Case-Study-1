@@ -11,7 +11,7 @@ import Server from "./services/server";
         await Mongo.connect();
         await new Server().start();
     } catch (e) {
-        console.log("mongo or services error")
+        console.log(e)
         process.exit();
     }
 })();

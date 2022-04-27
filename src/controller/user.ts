@@ -77,7 +77,7 @@ export default class CtrlUser {
                     pipeline: [
                         {
                             $match: {
-                                showTime: {$lt: moment().utcOffset(0, true).toISOString()}
+                                showTime: {$gt: moment().utcOffset(0, true).toISOString()}
                             }
                         }
                     ]
